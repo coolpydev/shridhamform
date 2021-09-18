@@ -1,0 +1,104 @@
+private $fieldMap = array(
+        // formFieldID => columnName
+        'f1'           => 'name',
+        'f2'           => 'email',
+        'f3'           => 'comments',
+		'f4'		   => 'guardian_Name',
+		'f6'           =>  'DOB',
+		'f32'		   =>  'gender',
+		'f7'           =>  'course'
+
+        'AutoID'       => 'AutoID',
+        'HTTP_HOST'    => 'HTTP_HOST',
+        'IP'           => 'IP',
+        'Date'         => 'Date',
+        'Time'         => 'Time',
+        'HTTP_REFERER' => 'HTTP_REFERER',
+    );
+	
+	
+	
+	
+	CREATE TABLE `demo` (
+	`id` INT(10) UNSIGNED NOT NULL auto_increment,
+	`name` TINYTEXT NULL,
+	`comments` TEXT NULL,
+	`email` VARCHAR(100) NULL DEFAULT NULL,
+	`guardian_Name` VARCHAR(100) TINYTEXT NULL,
+	`DOB` varchar(16) NULL DEFAULT NULL,
+	`gender` varchar(6) NULL DEFAULT NULL,
+	`course` varchar(100) NULL DEFAULT NULL,
+	`fee` varchar(100) NULL DEFAULT NULL,
+	
+	
+	
+	
+
+    `AutoID` varchar(64) NULL DEFAULT NULL,
+    `HTTP_HOST` varchar(255) NULL DEFAULT NULL,
+    `IP` varchar(15) NULL DEFAULT NULL,
+    `Date` varchar(16) NULL DEFAULT NULL,
+    `Time` varchar(16) NULL DEFAULT NULL,
+    `HTTP_REFERER` text,
+
+	PRIMARY KEY (`id`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+'f1' : Your Name xx
+'f4' : Guardian Name xx
+'f6' : Date Of Birth  xx
+'f32' : Gender xx
+'f7' : Course Name xx
+'f2' : Email xx
+'f5' : Mobile No.
+'f8_addressLine1' => 'paddr1',
+'f8_addressLine2'=>'paddr2', 
+'f8_city'=>'pcity', 
+'f8_country'=>'pcountry', 
+'f8_postalCode'=>'ppin', 
+'f8_state' =>'pstate',: Permanent Address
+'f9_addressLine1'=>,
+'f9_addressLine2'=>,
+'f9_city'=>,
+'f9_country'=>
+,'f9_postalCode'=>,
+'f9_state'=>'pstate' : Present Address
+'f10'=>'reln' : Religion/Caste
+'f11' => 'occ': Occupation/Profession
+'f12' =>'edu': Education Qualification
+'f13' =>'add_qual': Additional Qualification
+'f14' =>'exp': Experience (If Any)
+'f17' => 'lang': Language Medium
+'f16' => 'cmode': Course Mode
+'f20' => 'readings': xx Reading Material Send By
+'f21' => 'idcard': xx ID card
+'f22' => 'extras': xx Extra Service Recommended by (Rs. 1000)
+'f23' => 'remarks': Remarks xx
+'f25' => 'photo': Upload Image xx
+'f24' =>'docs': Attach Documents xx
+'f26' => 'fee',: Subscription (Fees)
+'dataTable' : xx A html table shows all form data
+'dataText' : xx Plain text format of form data
+'AutoID' : xx Reference ID of the form submission, like an Order ID.
+'Date' : xx Date
+'Time' : xx Time
+'IP' : xx IP address
+'HTTP_HOST' : xxYour website name
+'HTTP_REFERER' : xx The address of the page (if any) which referred the user agent to your form
+
+'f16' => 'cmode',
+'f17' => 'lang',
+'f14' =>'exp',
+'f13' =>'add_qual',
+'f12' =>'edu',
+'f11' => 'occ',
+'f10'=>'reln',
+'f9_addressLine1'=> 'taddr1',
+'f9_addressLine2'=>'taddr2',
+'f9_city'=>'tcity',
+'f9_country'=>'tcountry',
+,'f9_postalCode'=>'tpin',
+'f9_state'=>'tstate'

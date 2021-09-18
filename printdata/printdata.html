@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css"/>
+    <title>Registration Form Details</title>
+
+
+
+  </head>
+  <body>
+    
+<section>
+	<div class="container">
+		<div class="admit-card">
+			<div class="BoxA border- padding mar-bot"> 
+				<div class="row">
+					<div class="col-sm-6">
+						<h5>SHRIDHAM WELLNESS FOUNDATION</h5>
+						<p> HOME NO – 78, WARD NO -25/3 ,NEAR JAIN TRACTOR MOTI NAGAR SQUARE<br> MOTINAGAR BALAGHAT 481001(M.P) INDIA <br>07632-2444119617559343 , 9752109010, 7247614303​</p>
+					</div>
+					<div class="col-sm-3 txt-center">
+						<img src="http://peoplehelp.in/mewaruni/assets/images/mewaruniversity.jpg" width="100px;" />
+					</div>
+<?php
+
+
+if (isset($_POST['submit'])) {
+	 $searchValue = $_POST['search'];
+	$con = new mysqli("localhost", "root", "", "form2db");
+    if ($con->connect_error) {
+        echo "connection Failed: " . $con->connect_error;
+    } else {
+        $sql = "SELECT * FROM detailsform WHERE AutoID LIKE '%$searchValue%'";
+
+        $result = $con->query($sql);
+        while ($row = $result->fetch_assoc()) {
+				?>					
+	
+					<div class="col-sm-3">
+						<h5>Registration Form</h5>
+						<p>Date: <? echo $row['photo']; ?></p>
+					</div>
+				</div>
+			</div>
+			<div class="BoxC border- padding mar-bot">
+				<div class="row">
+					<div class="col-sm-6">
+						<h5>Registration No : <? echo $row['photo']; ?></h5>
+					</div>
+				</div>
+			</div>
+			<div class="BoxD border- padding mar-bot">
+				<div class="row">
+					<div class="col-sm-10">
+						<table class="table table-bordered">
+						  <tbody>
+							<tr>
+							  <td><b>Name : <? echo $row['photo']; ?></b></td>
+							  <td><b>Course: </b> <? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Father/Husband/Guardian Name: </b><? echo $row['photo']; ?></td>
+							  <td><b>Sex: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Nationality: </b><? echo $row['photo']; ?></td>
+							  <td><b>DOB: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Email: </b><? echo $row['photo']; ?></td>
+							  <td><b>Mobile: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td colspan="2" style="height: 125px;"><b>Permanent Address: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td colspan="2" style="height: 125px;"><b>Present Address: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Religion/Caste: </b><? echo $row['photo']; ?></td>
+							  <td><b>Blood Group: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Education: </b><? echo $row['photo']; ?></td>
+							  <td><b>Profession: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Course Mode: </b><? echo $row['photo']; ?></td>
+							  <td><b>Course Medium: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Subscription Method: </b><? echo $row['photo']; ?></td>
+							  <td><b>ID Card: </b><? echo $row['photo']; ?></td>
+							</tr>
+							<tr>
+							  <td><b>Remarks: </b><? echo $row['photo']; ?></td>
+							  <td><b>Reading Material: </b><? echo $row['photo']; ?></td>
+							</tr>
+						  </tbody>
+						</table>
+					</div>
+					<div class="col-sm-2 txt-center">
+						<table class="table table-bordered">
+						  <tbody>
+							<tr>
+							  <th scope="row txt-center"><img src="http://peoplehelp.in/mewaruni/assets/uploads/student_photo/cda1af3d3e81a4b46ef182a5336b778b.jpg" width="123px" height="165px" /></th>
+							</tr>
+							<!-- <tr>
+							  <th scope="row txt-center"><img src="http://peoplehelp.in/mewaruni/images/signature.png" /></th>
+							</tr> -->
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="BoxE border- padding mar-bot txt-center">
+				<div class="row">
+					<div class="col-sm-12">
+						<h5>EXAMINATION VENUE</h5>
+						<p>NH - 79 Gangrar Chittorgarh - 312901 <br> RAJASTHAN, INDIA</p>
+					</div>
+				</div>
+			</div>
+			<div class="BoxF border- padding mar-bot txt-center">
+				<div class="row">
+					<div class="col-sm-12">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Sr. No.</th>
+									<th>Subject/Paper</th>
+									<th>Exam Date</th>
+								</tr>
+							</thead>
+						  <tbody>
+							<tr>
+							  <td>1</td>
+							  <td>English</td>
+							  <td>5 July 2019</td>
+							</tr>
+							<tr>
+							  <td>2</td>
+							  <td>English</td>
+							  <td>5 July 2019</td>
+							</tr>
+							<tr>
+							  <td>3</td>
+							  <td>English</td>
+							  <td>5 July 2019</td>
+							</tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div> -->
+			<footer class="txt-center">
+				<p>**SHRIDHAM WELLNESS FOUNDATION**</p>
+			</footer>
+			<? } //end of while loop
+			
+			} // end of else
+			?>
+		</div>
+	</div>
+	
+</section>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
